@@ -269,16 +269,12 @@
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
       }
-
-      // Initialize first slide
-      showSlide(currentSlide);
-
       // Auto-slide every 5 seconds
       setInterval(nextSlide, slideInterval);
     });
 
     function sendMail(event) {
-      event.preventDefault(); // prevent default form submission
+
 
       const name = document.getElementById('user_name').value.trim();
       const email = document.getElementById('user_email').value.trim();
@@ -287,12 +283,12 @@
 
       const subject = encodeURIComponent("New Contact Form Submission");
       const body = encodeURIComponent(
-        `Hello,\n\nYou have received a new message from your website contact form.\n\n` +
+        `Hello,\n\n Welcome to UniChoice-Zambia Our team will respond to you in no time.\n\n` +
         `Name: ${name}\n` +
         `Email: ${email}\n` +
         `Phone: ${phone}\n\n` +
         `Message:\n${message}\n\n` +
-        `Best regards,\nYour Website`
+        `Best regards,\n`
       );
 
       // Opens the user's default mail client
