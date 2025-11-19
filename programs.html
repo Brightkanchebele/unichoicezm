@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/programs.css">
+  <title>Uni-Choice Zambia</title>
+</head>
+<body> 
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/image/logo.jpg" alt="Uni-Choice logo" class="logo-img">
+        <span class="nav-text"><h3>Uni-Choice Zambia</h3></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+         <li><a href="/about.html">About us</a></li>
+        <li><a href="universities.html">Universities</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Featured Program Section -->
+  <section class="featured-program">
+    <div class="featured-content">
+         <h1>Discover Our Top Programs</h1> 
+      <p> Cutting-edge courses in Engineering, ICT, Health, and Humanities that prepare you for success.</p>
+    </div>
+  </section>
+
+  <!-- Main Programs Grid -->
+  <main class="container">
+    <div class="program-grid">
+
+      <!-- Engineering Program -->
+      <div class="program program-card">
+        <div class="carousel" data-interval="3500">
+          <img src="image/EEE.png" alt="Engineering slide 1">
+          <img src="image/MECHANICAL.jpg" alt="Engineering slide 2">
+          <img src="image/CIVIL.jpg" alt="Engineering slide 3">
+          <img src="image/engineer.jpg" alt="Engineering slide 4">
+        </div>
+        <span class="explore-hover"><a href="Engineering.html">Engineering Programs</a></span>
+        <p>Explore mechanical, civil, electrical, and computer engineering with practical projects that shape the nation’s future.</p>
+      </div>
+
+      <!-- ICT Program -->
+      <div class="program program-card">
+        <div class="carousel" data-interval="3500">
+          <img src="image/ICT.jpg" alt="ICT slide 1">
+          <img src="image/ict (2).jpg" alt="ICT slide 2">
+        </div>
+        <span class="explore-hover"><a href="ICT.html">Explore ICT</a></span>
+        <p>Study software development, networking, information security, and computer forensics, along with emerging technologies for the digital world.</p>
+      </div>
+
+      <!-- Health Program -->
+      <div class="program program-card">
+        <div class="carousel" data-interval="3500">
+          <img src="image/BV7.jpeg" alt="Health slide 1">
+          <img src="/image/med.jpg" alt="Health slide 2">
+          <img src="image/BIO CHEM.jpeg" alt="Health slide 3">
+        </div>
+        <span class="explore-hover"><a href="Health.html">Explore Medicine</a></span>
+        <p>Prepare for careers in nursing, medicine, pharmacy, and public health to improve healthcare worldwide.</p>
+      </div>
+
+      <!-- Humanities Program -->
+      <div class="program program-card">
+        <div class="carousel" data-interval="3500">
+          <img src="image/BV3.jpeg" alt="Humanities slide 1">
+          <img src="image/ACCOUNT.png" alt="Humanities slide 2">
+          <img src="image/hum.jpg" alt="Humanities slide 3">
+        </div>
+        <span class="explore-hover"><a href="Humanities.html">Humanities</a></span>
+        <p>Learn business management, economics, law, and social sciences to drive innovation and leadership.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Uni-Choice Zambia. All rights reserved.</p>
+    <p>Designed by Bright Kanchebele</p>
+  </footer>
+<script>
+ // Select all carousel containers
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+  const images = carousel.querySelectorAll('img');
+  let current = 0;
+  const intervalTime = carousel.dataset.interval ? parseInt(carousel.dataset.interval) : 3500;
+
+  // Function to show next image with fade
+  const showNextImage = () => {
+    images[current].style.opacity = 0; // fade out current image
+    current = (current + 1) % images.length;
+    images[current].style.opacity = 1; // fade in next image
+  };
+
+  // Start carousel
+  setInterval(showNextImage, intervalTime);
+});
+
+</script>
+</body>
+</html>
