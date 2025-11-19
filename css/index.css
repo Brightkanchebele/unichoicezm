@@ -9,6 +9,14 @@ body {
   background: #f7f9fc;
   color: #222;
   font-family: 'Dancing Script', cursive;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -86,29 +94,32 @@ header nav a:hover {
   color: #fff;
   font-size: 1.1rem;
 }
-.button{
+
+.button {
   text-align: center;
   padding: 2rem;
 
 }
-.cta-link{
+
+.cta-link {
   display: inline-block;
   padding: 16px 40px;
-  background: linear-gradient(135deg,#0066ff,#00c2ff);
-  color:whitesmoke;
+  background: linear-gradient(135deg, #0066ff, #00c2ff);
+  color: whitesmoke;
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(0,102,225,0.3);
+  box-shadow: 0 8px 20px rgba(0, 102, 225, 0.3);
   transition: all 0.3s ease;
   text-transform: uppercase;
-  
+
 }
-.cta-link:hover{
+
+.cta-link:hover {
   transform: translateY(-4px);
-  box-shadow:0 8px 20px rgba(0,102,225,0.3); 
-   background: linear-gradient(135deg,#0066ff,#00c2ff);
+  box-shadow: 0 8px 20px rgba(0, 102, 225, 0.3);
+  background: linear-gradient(135deg, #0066ff, #00c2ff);
 
 }
 

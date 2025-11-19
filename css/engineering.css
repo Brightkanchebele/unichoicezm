@@ -3,6 +3,14 @@
       margin: 0;
       background: #f4f4f4;
       color: #222;
+      padding: o;
+      margin: 0;
+ }
+
+ html,
+ body {
+      width: 100%;
+      overflow-x: hidden;
  }
 
  header {
@@ -35,29 +43,30 @@
       border-radius: 6px;
       cursor: pointer;
  }
-/* Top Navigation Buttons */
-.nav-buttons {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
 
-.nav-btn {
-  background: linear-gradient(135deg, #005eff, #00b2ff);
-  color: white;
-  text-decoration: none;
-  padding: 10px 25px;
-  font-weight: 600;
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 90, 255, 0.4);
-  transition: 0.3s ease;
-}
+ /* Top Navigation Buttons */
+ .nav-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+ }
 
-.nav-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 90, 255, 0.6);
-  background: linear-gradient(135deg, #0044cc, #0098dd);
-}
+ .nav-btn {
+      background: linear-gradient(135deg, #005eff, #00b2ff);
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0, 90, 255, 0.4);
+      transition: 0.3s ease;
+ }
+
+ .nav-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 90, 255, 0.6);
+      background: linear-gradient(135deg, #0044cc, #0098dd);
+ }
 
  /* Menu styles */
  .menu-container {

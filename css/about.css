@@ -5,11 +5,19 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #fff;
   background: #f4f7f9;
-   font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -18,7 +26,7 @@ a {
 }
 
 header {
-   background: linear-gradient(to right, #003366, #0066cc);
+  background: linear-gradient(to right, #003366, #0066cc);
   color: #fff;
   padding: 10px 0;
   text-align: center;
@@ -29,8 +37,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: white;}
- 
+  color: white;
+}
+
 
 .navbar .logo {
   display: flex;
@@ -51,8 +60,8 @@ header {
 }
 
 .nav-links a {
-   color:whitesmoke;
-   background: linear-gradient(135deg, #005eff, #00b2ff);
+  color: whitesmoke;
+  background: linear-gradient(135deg, #005eff, #00b2ff);
   color: white;
   text-decoration: none;
   padding: 10px 25px;

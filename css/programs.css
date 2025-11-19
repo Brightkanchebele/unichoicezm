@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +8,17 @@ body {
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
-      font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive;
+  padding: 0;
+  margin: 0;
+
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 .navbar {
   display: flex;
@@ -41,8 +48,8 @@ body {
 }
 
 .nav-links a {
-   color:whitesmoke;
-   background: linear-gradient(135deg, #005eff, #00b2ff);
+  color: whitesmoke;
+  background: linear-gradient(135deg, #005eff, #00b2ff);
   color: white;
   text-decoration: none;
   padding: 10px 25px;
@@ -58,36 +65,38 @@ body {
 }
 
 .featured-content {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .featured-content h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #0056b3; /* primary color */
-    margin-bottom: 20px;
-    line-height: 1.2;
-    font-family: 'Roboto', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0056b3;
+  /* primary color */
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
 }
 
 .featured-content p {
-    font-size: 1.2rem;
-    color: #333;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .featured-content h1 {
-        font-size: 2rem;
-    }
-    .featured-content p {
-        font-size: 1rem;
-    }
+  .featured-content h1 {
+    font-size: 2rem;
+  }
+
+  .featured-content p {
+    font-size: 1rem;
+  }
 }
 
 .btn-explore {
@@ -124,7 +133,7 @@ body {
 .program-card {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.s ease;
   font-family: cursive;
@@ -151,7 +160,7 @@ body {
 .carousel img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
