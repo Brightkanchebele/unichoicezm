@@ -62,12 +62,11 @@
 
   <!-- Medicine -->
   <article class="card">
-    <img src="image/med.jpg" />
+    <img src="image/HEALTH.jpg" />
     <div class="card-body">
       <h2>Medicine</h2>
       <div class="tags"><span class="tag">MBChB</span><span class="tag">6 years</span></div>
       <p class="program-text">Training to become a licensed medical doctor. Includes anatomy, physiology, pharmacology, clinical practice, and hospital rotations.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Doctor</li><li>Surgeon</li><li>Medical Officer</li></ul>
       <h4>Admission Requirements</h4>
@@ -84,7 +83,6 @@
       <h2>Nursing</h2>
       <div class="tags"><span class="tag">BScN</span><span class="tag">4 years</span></div>
       <p class="program-text">Focuses on patient care, medical procedures, health promotion, and clinical rotations in hospitals and clinics.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Registered Nurse</li><li>Clinical Nurse Officer</li><li>Health Administrator</li></ul>
       <h4>Admission Requirements</h4>
@@ -101,7 +99,6 @@
       <h2>Pharmacy</h2>
       <div class="tags"><span class="tag">BPharm</span><span class="tag">5 years</span></div>
       <p class="program-text">Covers drug formulation, pharmacology, medicinal chemistry, clinical pharmacy, and pharmaceutical management.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Pharmacist</li><li>Clinical Pharmacist</li><li>Pharmaceutical Researcher</li></ul>
       <h4>Admission Requirements</h4>
@@ -118,7 +115,6 @@
       <h2>Public Health</h2>
       <div class="tags"><span class="tag">BPH</span><span class="tag">4 years</span></div>
       <p class="program-text">Covers epidemiology, health policy, community health, environmental health, and health promotion strategies.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Public Health Officer</li><li>Health Policy Analyst</li><li>Community Health Coordinator</li></ul>
       <h4>Admission Requirements</h4>
@@ -135,7 +131,7 @@
       <h2>Biomedical Sciences</h2>
       <div class="tags"><span class="tag">BSc</span><span class="tag">4 years</span></div>
       <p class="program-text">Study human biology, microbiology, molecular biology, genetics, and laboratory diagnostics.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
+
       <h4>Career Paths</h4>
       <ul><li>Biomedical Scientist</li><li>Lab Technician</li><li>Research Scientist</li></ul>
       <h4>Admission Requirements</h4>
@@ -152,7 +148,6 @@
       <h2>Physiotherapy</h2>
       <div class="tags"><span class="tag">BSc</span><span class="tag">4 years</span></div>
       <p class="program-text">Focuses on rehabilitation, musculoskeletal health, exercise therapy, and patient mobility improvement.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Physiotherapist</li><li>Rehabilitation Specialist</li><li>Sports Therapist</li></ul>
       <h4>Admission Requirements</h4>
@@ -169,7 +164,6 @@
       <h2>Radiography</h2>
       <div class="tags"><span class="tag">BSc</span><span class="tag">4 years</span></div>
       <p class="program-text">Training in diagnostic imaging, X-ray, MRI, CT scans, and patient safety in radiology.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Radiographer</li><li>Medical Imaging Specialist</li><li>Radiology Technician</li></ul>
       <h4>Admission Requirements</h4>
@@ -186,7 +180,6 @@
       <h2>Dentistry</h2>
       <div class="tags"><span class="tag">BDS</span><span class="tag">5 years</span></div>
       <p class="program-text">Dental surgery, oral health, orthodontics, prosthodontics, and patient care.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Dentist</li><li>Oral Health Specialist</li><li>Dental Surgeon</li></ul>
       <h4>Admission Requirements</h4>
@@ -203,7 +196,6 @@
       <h2>Medical Laboratory Science</h2>
       <div class="tags"><span class="tag">BSc</span><span class="tag">4 years</span></div>
       <p class="program-text">Lab-based diagnostics, microbiology, pathology, hematology, and medical research techniques.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Lab Scientist</li><li>Clinical Technician</li><li>Research Assistant</li></ul>
       <h4>Admission Requirements</h4>
@@ -220,7 +212,6 @@
       <h2>Environmental Health</h2>
       <div class="tags"><span class="tag">BSc</span><span class="tag">4 years</span></div>
       <p class="program-text">Study sanitation, disease prevention, pollution control, water quality, and public health standards.</p>
-      <a class="read-more" onclick="toggleText(this)">Read More</a>
       <h4>Career Paths</h4>
       <ul><li>Environmental Health Officer</li><li>Public Health Specialist</li><li>Sanitation Manager</li></ul>
       <h4>Admission Requirements</h4>
@@ -250,27 +241,7 @@
     }
   });
 
-  // Read More toggle
-  function toggleText(btn) {
-    const p = btn.previousElementSibling;
-    if (btn.innerText === "Read More") {
-      p.style.whiteSpace = "normal";
-      p.style.overflow = "visible";
-      p.style.textOverflow = "clip";
-      btn.innerText = "Show Less";
-    } else {
-      p.style.whiteSpace = "nowrap";
-      p.style.overflow = "hidden";
-      p.style.textOverflow = "ellipsis";
-      btn.innerText = "Read More";
-    }
-  }
-
-  document.querySelectorAll('.program-text').forEach(p => {
-    p.style.whiteSpace = "nowrap";
-    p.style.overflow = "hidden";
-    p.style.textOverflow = "ellipsis";
-  });
+ 
 </script>
 
 </body>

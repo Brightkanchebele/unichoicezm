@@ -66,7 +66,6 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Focuses on design, construction, and maintenance of infrastructure including roads,
           bridges, and buildings. Students learn structural analysis, materials science, and project management.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Structural Engineer</li>
@@ -90,7 +89,6 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Covers design, manufacturing, and maintenance of mechanical systems. Includes
           thermodynamics, fluid mechanics, and robotics.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Mechanical Engineer</li>
@@ -114,7 +112,7 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Focus on electrical systems, circuits, power generation, electronics, and
           telecommunications.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
+    
         <h4>Career Paths</h4>
         <ul>
           <li>Electrical Engineer</li>
@@ -138,7 +136,6 @@
         <div class="tags"><span class="tag">BArch</span><span class="tag">5 years</span></div>
         <p class="program-text">Designing sustainable and functional buildings. Includes urban planning, environmental
           design, and construction technology.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Architect</li>
@@ -163,7 +160,6 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Covers extraction and processing of minerals, mine safety, mineral economics, and
           resource management.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Mining Engineer</li>
@@ -187,7 +183,6 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Study chemical processes, industrial chemistry, process engineering, and production
           management.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Chemical Engineer</li>
@@ -213,7 +208,6 @@
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Focus on power generation, transmission, renewable energy, and electrical grid
           management.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Power Engineer</li>
@@ -236,7 +230,6 @@
         <h2>Telecommunications Engineering</h2>
         <div class="tags"><span class="tag">BEng</span><span class="tag">4 years</span></div>
         <p class="program-text">Focus on telecom systems, networks, wireless communications, and signal processing.</p>
-        <a class="read-more" onclick="toggleText(this)">Read More</a>
         <h4>Career Paths</h4>
         <ul>
           <li>Telecom Engineer</li>
@@ -272,28 +265,10 @@
       }
     });
 
-    // Read More toggle
-    function toggleText(btn) {
-      const p = btn.previousElementSibling;
-      if (btn.innerText === "Read More") {
-        p.style.whiteSpace = "normal";
-        p.style.overflow = "visible";
-        p.style.textOverflow = "clip";
-        btn.innerText = "Show Less";
-      } else {
-        p.style.whiteSpace = "nowrap";
-        p.style.overflow = "hidden";
-        p.style.textOverflow = "ellipsis";
-        btn.innerText = "Read More";
-      }
-    }
+    
 
-    // Initialize all program paragraphs as truncated
-    document.querySelectorAll('.program-text').forEach(p => {
-      p.style.whiteSpace = "nowrap";
-      p.style.overflow = "hidden";
-      p.style.textOverflow = "ellipsis";
-    });
+   
+
   </script>
 
 </body>
