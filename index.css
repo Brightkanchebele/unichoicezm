@@ -181,13 +181,13 @@ header nav a:hover {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 
 .explore-btn:hover {
-  background:  #005eff;
+  background: #005eff;
   transform: translateY(-5px);
 }
 
@@ -547,14 +547,11 @@ font-weight: bold;
 
 
 footer {
-  padding: 20px;
-  background-color: #102a71;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 70px;
+  padding: 20px;
+  margin-top: 40px;
+  background: #0a4a8a;
+  color: white;
 }
 
 

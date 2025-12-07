@@ -123,21 +123,6 @@ header p {
   padding-left: 10px;
 }
 
-.read-more-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #c0392b;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.read-more-btn:hover {
-  background-color: #96281b;
-}
-
 
 
 .container {
@@ -193,18 +178,6 @@ header p {
 
 ul {
   padding-left: 20px;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
-  background: #0a4a8a;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  text-decoration: none;
 }
 
 footer {

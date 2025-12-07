@@ -148,17 +148,6 @@ ul {
     padding-left: 20px;
 }
 
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
-    background: #0a4a8a;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
 
 footer {
     text-align: center;
