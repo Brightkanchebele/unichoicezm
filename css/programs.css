@@ -165,14 +165,16 @@
   }
 
 
-  footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #102a71;
-    color: white;
-    font-weight: bold;
-    margin-top: 40px;
-  }
+footer {
+  padding: 20px;
+  background-color: #102a71;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 70px;
+}
 
   @media (max-width: 768px) {
     .slider-title {

@@ -639,7 +639,6 @@ header nav a:hover {
   background: #1e40af;
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
