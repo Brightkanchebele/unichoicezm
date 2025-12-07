@@ -28,7 +28,6 @@
     </nav>
   </header>
 
-  <!-- CAREER INSPIRATION SECTION -->
   <section id="career-inspiration">
 
     <div class="slide active" style="background-image: url('image/m.jpg');">
@@ -76,29 +75,27 @@
       </div>
     </div>
   </section>
-  <div class="button">
-    <a href="programs.html" class="cta-link">
-      <center>
-        <h2>EXPLORE </h2>
-      </center>
-    </a>
-  </div>
+  <a href="programs.html" class="explore-btn">
+    Click to Get Started and Explore Programs
+  </a>
   <section id="testimonials" class="testimonials">
-    <h2>What Students Say</h2>
-    <p>Real experiences from students who used UniChoice Career Path.</p>
+
+    <h2>
+      <p>Real experiences from students who used UniChoice </p>
+    </h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <img src="image/student1.jpg">
         <div class="testimonial-content">
-          <p>"Thanks to UniChoice, I discovered the career that speaks to my heart.”</p>
-          <h3>Thukuza Soko</h3>
-          <span>Humanity student at University of Zambia (UNZA)</span>
+
+          <h4>Thukuza Soko</h4>
+          <span>student at (UNZA)</span>
         </div>
       </div>
       <div class="testimonial-card">
         <img src="image/semmy.png">
         <div class="testimonial-content">
-          <p>“UniChoice showed me that architecture is where my creativity and purpose meet.”</p>
+
           <h3>Semmy Ngoma</h3>
           <span>Archtech Student at Information and Communications University (ICU)</span>
         </div>
@@ -106,7 +103,7 @@
       <div class="testimonial-card">
         <img src="image/VERONICA.png">
         <div class="testimonial-content">
-          <p>“I used UniChoice to find my purpose, and nursing was the answer.”</p>
+
           <h3>Veronica M</h3>
           <span>Health Student at Choma college of Nursing</span>
         </div>
@@ -115,7 +112,7 @@
       <div class="testimonial-card">
         <img src="image/TJK.png">
         <div class="testimonial-content">
-          <p>“Premium experience! UniChoice breaks everything down clearly and professionally.”</p>
+
           <h3>TJK</h3>
           <span>Business Student at Mulugushi University(MU)</span>
         </div>
@@ -129,14 +126,14 @@
     <h2 class="section-title">Our Trusted Partners</h2>
 
     <div class="partners-grid">
-      <!-- Partner 1 -->
+
       <div class="partner-card">
         <img src="image/ZRDC.jpg" alt="ZRDC">
         <h3>Zambia Research & Development Center</h3>
         <a class="visit-btn" href="https://zrdc.org/" target="_blank">Visit Website</a>
       </div>
 
-      <!-- Partner 2 -->
+
       <div class="partner-card">
         <img src="image/ICU.png" alt="ICU">
         <h3>Information & Communication University</h3>
@@ -148,20 +145,25 @@
     <center>
       <h1>Scholarships in Zambia</h1>
     </center>
+
     <p class="lead">Government, public, and private scholarships for Zambian students.</p>
 
+    <hr>
+    <br>
     <div class="scholarship-grid">
-      <!-- HELSB -->
+
       <div class="scholarship-card">
         <h3>HELSB Scholarships</h3>
         <p>Government scholarships for undergraduates, masters, and PhD programs. Check HELSB for open adverts.</p>
         <a class="btn" href="https://helsb.gov.zm/scholarships/" target="_blank">View HELSB</a>
       </div>
 
-      <!-- Public Universities -->
+
       <div class="scholarship-card">
+
         <h3>Public Universities</h3>
         <ul>
+          <H2>HELSB Scholarships</H2>
           <li>Chalimbana University</li>
           <li>Copperbelt University</li>
           <li>Kwame Nkrumah University</li>
@@ -173,7 +175,7 @@
         <a class="btn" href="https://heaims.hea.org.zm/frontend/web/site/institutions" target="_blank">Full list</a>
       </div>
 
-      <!-- Private Universities -->
+
       <div class="scholarship-card">
         <h3>Private Universities</h3>
         <ul>
@@ -184,7 +186,7 @@
         </ul>
       </div>
 
-      <!-- How to Apply -->
+
       <div class="scholarship-card">
         <h3>How to Apply</h3>
         <ol>
@@ -198,10 +200,12 @@
 
   <section id="contact" class="contact-section"></section>
   <section class="contact-section">
-    <h3 class="contact-title">Contact Us</h3>
+    <h3 class="contact-title">Contact support <br> Our Team is available to assist you.</h3>
+
+
     <div class="contact-container">
 
-      <!-- Contact Form -->
+
       <form class="contact-form" onsubmit="sendMail(event)">
         <label class="contact-label" for="user_name"></label>
         <input class="contact-input" type="text" id="user_name" name="user_name" placeholder="Your Name" required>
@@ -248,11 +252,11 @@
   </footer>
   <script>
 
-    // HERO
+
     document.addEventListener("DOMContentLoaded", () => {
       const slides = document.querySelectorAll("#career-inspiration .slide");
       let currentSlide = 0;
-      const slideInterval = 5000; // 5 seconds per slide
+      const slideInterval = 5000;
 
       function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -269,7 +273,7 @@
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
       }
-      // Auto-slide every 5 seconds
+
       setInterval(nextSlide, slideInterval);
     });
 
@@ -291,7 +295,7 @@
         `Best regards,\n`
       );
 
-      // Opens the user's default mail client
+
       window.location.href = `mailto:brightkanchebele@gmail.com?subject=${subject}&body=${body}`;
     }
   </script>

@@ -3,263 +3,457 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#000000">
-  <link rel="icon" href="/unichoicezm/image/logo.jpg" type="image/jpg">
-  <title> Universities & Colleges UniChoice</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> UNICHOICE ZM </title>
   <style>
-    * {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #f4f7fb, #e0e7ff);
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'dancing'cursive;
-    }
-
-    body {
-      background: #f0f4f8;
       color: #333;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: #1e3a8a;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #2563eb;
     }
 
     h1,
-    h2,
-    h3,
-    h4 {
-      margin-bottom: 10px;
-      color: #111827;
-    }
-
-    p {
-      margin-bottom: 10px;
-      color: white;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-       background: linear-gradient(to right, #003366, #0066cc);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-img {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-      border-radius: 10px;
-    }
-
-    .logo-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
-    }
-
-    .nav-links a {
-      color: whitesmoke;
-      background: linear-gradient(135deg, #005eff, #00b2ff);
-      color: white;
-      text-decoration: none;
-      padding: 10px 25px;
-      font-weight: 600;
-      border-radius: 30px;
-      box-shadow: 0 5px 15px rgba(0, 90, 255, 0.4);
-      transition: 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #facc15;
-    }
-
-    .uni-list {
-      padding: 50px 40px;
-    }
-
-    .uni-list h2 {
+    h2 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
       color: #1e3a8a;
     }
 
-    .uni-grid {
+    h1 {
+      padding: 40px 20px 20px;
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      padding: 25px 10px 15px;
+      font-size: 1.8rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background-color: #1e3a8a;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header .logo img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    header .logo h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    header .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    header .nav-links a {
+      text-decoration: none;
+      color: whitesmoke;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #005eff, #00b2ff);
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 90, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    header .nav-links a:hover {
+      color: #fca311;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 24px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .uni-card {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: 0.3s;
-      position: relative;
-      text-align: center;
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .uni-card:hover {
+    .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
     }
 
-    .uni-card a {
+    .bg {
+      width: 100%;
+      height: 180px;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover .bg {
+      transform: scale(1.05);
+    }
+
+    .info {
+      padding: 16px;
+    }
+
+    .info h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+      color: #0b1220;
+    }
+
+    .info p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .info a {
       display: inline-block;
-      margin-top: 15px;
-      padding: 8px 15px;
+      margin-top: 10px;
+      padding: 8px 16px;
       background: #2563eb;
       color: white;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
     }
 
-    .uni-card a:hover {
+    .info a:hover {
       background: #1e40af;
     }
 
-    .uni-card::before {
-      content: '';
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 80px;
-      background-image: var(--logo);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 10px;
-    }
-
-    .category {
-      margin-top: 15px;
-      padding: 6px 12px;
+    .category-label {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 10px;
       background: #e0f2fe;
       color: #1e3a8a;
-      font-weight: bold;
       border-radius: 8px;
-      display: inline-block;
+      font-weight: 600;
+      font-size: 0.8rem;
     }
 
     footer {
       text-align: center;
-      padding: 25px 20px;
-        background: linear-gradient(to right, #003366, #0066cc);
-      color: white;
-      margin-top: 50px;
-      font: 600;
+      padding: 25px 10px;
+      background: #1e3a8a;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header class="navbar">
+  <header>
     <div class="logo">
-      <img src="image/logo.jpg" alt="UniChoice Logo" class="logo-img" />
-      <h1 class="logo-text">UniChoice Zambia</h1>
+      <img src="image/logo.jpg" alt="Uni-Choice Logo">
+      <h3>Uni-Choice Zambia</h3>
     </div>
-    <nav class="nav-links">
-      <a href="programs.html">Back</a>
-      <a href="index.html">Home</a>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="programs.html">back</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
   </header>
+  <h1> Universities & Colleges </h1>
 
-  <section class="uni-list">
-    <h2>Recognised Universities & Colleges in Zambia</h2>
-    <div class="uni-grid">
 
-      <div class="uni-card" style="--logo: url('/image/unza_logo.png');">
+  <div class="grid">
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/unza.jpeg');"></div>
+      <div class="info">
         <h3>University of Zambia (UNZA)</h3>
-        <span class="category">Engineering • Health • Humanities • Science</span>
+        <p>Lusaka</p>
+        <span class="category-label">Engineering.Business.Health</span>
         <a href="https://www.unza.zm" target="_blank">Visit Website ↗</a>
       </div>
+    </div>
 
-      <div class="uni-card" style="--logo: url('/image/cbu_logo.png');">
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/cbu.jpeg');"></div>
+      <div class="info">
         <h3>Copperbelt University (CBU)</h3>
-        <span class="category">Engineering • ICT • Forestry • Business</span>
-        <a href="http://www.cbu.ac.zm" target="_blank">Visit Website ↗</a>
+        <p> Kitwe</p>
+        <span class="category-label">Engineering.Business.Health</span>
+        <a href="https://www.cbu.ac.zm" target="_blank">Visit Website ↗</a>
       </div>
+    </div>
 
-      <div class="uni-card" style="--logo: url('/image/mu_logo.png');">
-        <h3>Mulungushi University</h3>
-        <span class="category">Business • ICT • Public Admin • Education</span>
-        <a href="https://www.mu.ac.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('/image/evelynhone_logo.png');">
-        <h3>Evelyn Hone College</h3>
-        <span class="category">ICT • Engineering • Health • Business</span>
-        <a href="https://www.evelynhone.edu.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('/image/nipa_logo.png');">
-        <h3>National Institute of Public Administration (NIPA)</h3>
-        <span class="category">Public Admin • Business • Governance</span>
-        <a href="https://www.nipa.ac.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('/image/lmmu_logo.png');">
-        <h3>Levy Mwanawasa Medical University (LMMU)</h3>
-        <span class="category">Health • Public Health • Biomedical</span>
-        <a href="http://www.lmmu.ac.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('/image/lamu_logo.png');">
-        <h3>Lusaka Apex Medical University (LAMU)</h3>
-        <span class="category">Health • Medicine</span>
-        <a href="https://www.lamu.edu.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('/image/tau_logo.png');">
-        <h3>Texila American University Zambia (TAU‑Z)</h3>
-        <span class="category">Health • Public Health • ICT</span>
-        <a href="https://tau.edu.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
-      <div class="uni-card" style="--logo: url('');">
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/icuzm.jpeg');"></div>
+      <div class="info">
         <h3>Information & Communication University (ICU)</h3>
-        <span class="category">ICT • Software Engineering • Security</span>
+        <p>Lusaka</p>
+        <span class="category-label">ICT.Engineering.Business.</span>
         <a href="https://www.icuzambia.net" target="_blank">Visit Website ↗</a>
       </div>
+    </div>
 
-      <div class="uni-card" style="--logo: url('/image/zut_logo.png');">
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/zut.jpeg');"></div>
+      <div class="info">
         <h3>Zambia University College of Technology (ZUT)</h3>
-        <span class="category">Technology • Engineering • Business</span>
+        <p> Lusaka</p>
+        <span class="category-label">Engineering.ICT</span>
         <a href="https://www.zut.ac.zm" target="_blank">Visit Website ↗</a>
       </div>
-
-      <div class="uni-card" style="--logo: url('/image/mukuba_logo.png');">
-        <h3>Mukuba University</h3>
-        <span class="category">ICT • Education • Science</span>
-        <a href="https://www.mukuba.edu.zm" target="_blank">Visit Website ↗</a>
-      </div>
-
     </div>
-  </section>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/rv.jpeg');"></div>
+      <div class="info">
+        <h3>Rockview University</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Engineering.Humamties</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/copperstone.jpeg');"></div>
+      <div class="info">
+        <h3>Copperstone University</h3>
+        <p> Kitwe / Copperbelt</p>
+        <span class="category-label">Engineering</span>
+
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/mu.jpeg');"></div>
+      <div class="info">
+        <h3>Mulungushi University</h3>
+        <p> Kabwe</p>
+        <span class="category-label">Humanities.Health.Engneering</span>
+        <a href="https://www.mu.ac.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/knu.jpeg');"></div>
+      <div class="info">
+        <h3>Kwame Nkrumah University (KNU)</h3>
+        <p> Kabwe</p>
+        <span class="category-label">Humanities</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/afrc.jpeg');"></div>
+      <div class="info">
+        <h3>African Christian University</h3>
+        <p>Lusaka</p>
+        <span class="category-label">Humanities</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/palau.jpeg');"></div>
+      <div class="info">
+        <h3>Palabana University</h3>
+        <p> Chongwe / Lusaka area</p>
+        <span class="category-label">Humanities</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/nipa.jpeg');"></div>
+      <div class="info">
+        <h3>National Institute of Public Administration (NIPA)</h3>
+        <p> Lusaka</p>
+        <span class="category-label">• Business</span>
+        <a href="https://www.nipa.ac.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/rusa.jpeg');"></div>
+      <div class="info">
+        <h3>Rusangu University</h3>
+        <p>Monze, Southern Province</p>
+        <span class="category-label">Humanities • Theology</span>
+        <a href="https://www.rusangu.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/zcas.jpeg');"></div>
+      <div class="info">
+        <h3>ZCAS University</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Business • ICT</span>
+        <a href="https://www.zcas.ac.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/dmi.jpeg');"></div>
+      <div class="info">
+        <h3>DMI-St. Eugene University</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Business • Humanities</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/cher.jpeg');"></div>
+      <div class="info">
+        <h3>Chreso University</h3>
+        <p>Lusaka / Ndola</p>
+        <span class="category-label">ICT • Business</span>
+        <a href="https://www.chresou.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/ndola.jpeg');"></div>
+      <div class="info">
+        <h3>Ndola College</h3>
+        <p> Ndola</p>
+        <span class="category-label">Health</span>
+        <a href="https://www.ndolacollege.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/evelyhone.jpeg');"></div>
+      <div class="info">
+        <h3>Evelyn Hone College</h3>
+        <p>Lusaka</p>
+        <span class="category-label">ICT.HEALTH</span>
+        <a href="https://www.evelynhone.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/levy.jpeg');"></div>
+      <div class="info">
+        <h3>Levy Mwanawasa Medical University (LMMU)</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Health</span>
+        <a href="http://www.lmmu.ac.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/apex.jpeg');"></div>
+      <div class="info">
+        <h3>Lusaka Apex Medical University (LAMU)</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Health</span>
+        <a href="https://www.lamu.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/texila.jpeg');"></div>
+      <div class="info">
+        <h3>Texila American University Zambia (TAU-Z)</h3>
+        <p> Lusaka</p>
+        <span class="category-label">Health</span>
+        <a href="https://tau.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/cu.jpeg');"></div>
+      <div class="info">
+        <h3>Cavendish University Zambia</h3>
+        <p>Lusaka</p>
+        <span class="category-label">ICT • Humanities</span>
+        <a href="https://www.cavendishza.org" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/eden.jpeg');"></div>
+      <div class="info">
+        <h3>Eden University</h3>
+        <p>Lusaka</p>
+        <span class="category-label">Business • ICT</span>
+        <a href="https://www.edenuniversity.edu.zm" target="_blank">Visit Website ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/choma.jpeg');"></div>
+      <div class="info">
+        <h3>Choma College of Health science</h3>
+        <p>Choma</p>
+        <span class="category-label">health</span>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="bg" style="background-image:url('/unichoicezm/image/lv.jpeg');"></div>
+      <div class="info">
+        <h3>Livingstone College of health science</h3>
+        <p>Livingstone</p>
+        <span class="category-label">Health •</span>
+
+      </div>
+    </div>
+
+  </div>
 
   <footer>
     <p>&copy; 2025 Uni-Choice Zambia. All rights reserved.</p>

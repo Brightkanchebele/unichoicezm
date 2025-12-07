@@ -1,5 +1,5 @@
  body {
-      font-family: Arial, sans-serif;
+      font-family: georgia, serif;
       margin: 0;
       background: #f4f4f4;
       color: #222;
@@ -7,119 +7,80 @@
       margin: 0;
  }
 
- html,
- body {
-      width: 100%;
-      overflow-x: hidden;
- }
 
  header {
-      background: #0a4a8a;
+      background: linear-gradient(135deg, #0a4a8a, #0066c8);
       color: white;
+      padding: 15px 10px 20px;
       text-align: center;
-      padding: 40px 20px;
-      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
  }
+
+
+ header .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+ }
+
+
+ header .logo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+ }
+
 
  header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      margin: 5px 0;
+      font-size: 1.9rem;
+      font-weight: 700;
  }
+
 
  header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      opacity: 0.95;
  }
 
- /* Back button */
- .back-btn {
-      position: absolute;
-      left: 20px;
-      top: 20px;
-      background: white;
-      color: #0a4a8a;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 6px;
-      cursor: pointer;
+
+ .nav-buttons {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
  }
 
- /* Top Navigation Buttons */
+
  .nav-buttons {
       display: flex;
+      justify-content: center;
       gap: 15px;
-      margin-bottom: 15px;
+      margin: 15px 0;
+      flex-wrap: wrap;
  }
 
  .nav-btn {
-      background: linear-gradient(135deg, #005eff, #00b2ff);
-      color: white;
+      background: white;
+      color: #0a4a8a;
+      padding: 10px 26px;
       text-decoration: none;
-      padding: 10px 25px;
       font-weight: 600;
-      border-radius: 30px;
-      box-shadow: 0 5px 15px rgba(0, 90, 255, 0.4);
-      transition: 0.3s ease;
+      border-radius: 25px;
+      border: 2px solid #fff;
+      transition: 0.3s;
  }
 
  .nav-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 90, 255, 0.6);
-      background: linear-gradient(135deg, #0044cc, #0098dd);
- }
-
- /* Menu styles */
- .menu-container {
-      position: relative;
-      margin-top: 15px;
- }
-
- .menu-btn {
-      background: white;
-      color: #0a4a8a;
-      border: none;
-      padding: 8px 15px;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
- }
-
- .menu-dropdown {
-      display: none;
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      list-style: none;
-      padding: 0;
-      min-width: 220px;
-      z-index: 100;
- }
-
- .menu-dropdown li {
-      border-bottom: 1px solid #eee;
- }
-
- .menu-dropdown li:last-child {
-      border-bottom: none;
- }
-
- .menu-dropdown li a {
-      display: block;
-      padding: 10px 15px;
-      color: #0a4a8a;
-      text-decoration: none;
- }
-
- .menu-dropdown li a:hover {
-      background: #0a4a8a;
+      background: rgba(255, 255, 255, 0.2);
       color: white;
  }
 
- /* Advisory card styling */
+
+
  .advisory-card {
       background: linear-gradient(135deg, #ffffff, #e0f0ff);
       border-radius: 20px;
